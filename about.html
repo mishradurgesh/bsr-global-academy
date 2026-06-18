@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | BSR Global Education Academy</title>
+<meta name="description" content="Learn about BSR Global Education Academy — our mission, our tutors, and our commitment to personalised online education for students worldwide.">
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero {
+  background: linear-gradient(145deg, #0B2E5A 0%, #1A4FA0 100%);
+  padding: 140px 0 80px; text-align: center; color: #fff;
+}
+.page-hero h1 { color: #fff; margin-bottom: 16px; }
+.page-hero p  { color: rgba(255,255,255,.75); font-size: 1.15rem; max-width: 600px; margin: 0 auto; }
+.breadcrumb { display: flex; justify-content: center; gap: 8px; font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: 24px; }
+.breadcrumb a { color: var(--gold-light); text-decoration: none; }
+
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.mission-img  { position: relative; }
+.mission-img-main { width: 100%; border-radius: 24px; overflow: hidden; background: linear-gradient(135deg,var(--navy),var(--royal)); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; font-size:6rem; }
+.mission-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: var(--gold); border-radius: 16px; padding: 20px 24px; text-align: center;
+  box-shadow: 0 8px 32px rgba(245,166,35,.4);
+}
+.mission-badge strong { display: block; font-size: 2rem; color: var(--navy); }
+.mission-badge span   { font-size: .78rem; color: var(--navy); font-weight: 600; }
+
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px; }
+.value-card { text-align: center; padding: 36px 24px; }
+.value-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.value-card h3 { color: var(--navy); margin-bottom: 10px; }
+
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 28px; }
+.team-card { text-align: center; padding: 36px 24px; }
+.team-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg,var(--navy),var(--sky)); margin: 0 auto 16px; display:flex; align-items:center; justify-content:center; font-size:2rem; color:#fff; }
+.team-card h3 { color: var(--navy); margin-bottom: 4px; }
+.team-card .role { color: var(--sky); font-size: .88rem; font-weight: 600; margin-bottom: 10px; }
+
+.stats-strip { background: var(--navy); padding: 64px 0; }
+.stats-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; text-align: center; }
+.stat-item strong { display: block; font-size: 2.8rem; font-weight: 800; color: var(--gold-light); }
+.stat-item span   { color: rgba(255,255,255,.6); font-size: .9rem; }
+
+@media (max-width:900px){
+  .mission-grid { grid-template-columns:1fr; }
+  .stats-inner  { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width:600px){
+  .stats-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="BSR Global Education Academy Logo">
+      <div class="nav-logo-text"><strong>BSR Global</strong><span>Education Academy</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="demo.html" class="btn btn-primary">Book Free Demo</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / About Us</div>
+  <h1>About BSR Global</h1>
+  <p>Founded on the belief that every student deserves a world-class education, regardless of where they live.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-img">
+        <div class="mission-img-main">🏹</div>
+        <div class="mission-badge">
+          <strong>500+</strong>
+          <span>Success Stories</span>
+        </div>
+      </div>
+      <div>
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-title">Aiming High, Together</h2>
+        <div class="gold-bar left"></div>
+        <p style="margin-top:20px">BSR Global Education Academy was founded with one clear purpose: to make expert, personalised education accessible to every motivated student on the planet. Our name is inspired by the archer — precise, disciplined, and always aiming true.</p>
+        <p style="margin-top:16px">We are a team of passionate educators who have themselves studied and taught across international curricula. We know exactly what IB examiners are looking for, how to crack the SAT's hardest questions, and how to make a GCSE student love a subject they once feared.</p>
+        <p style="margin-top:16px">From our base in India to students in Singapore, Australia, the UAE and beyond — every session we deliver is driven by the same conviction: <strong style="color:var(--navy)">a brilliant tutor, focused entirely on your child, changes everything.</strong></p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+          <a href="demo.html" class="btn btn-primary">Book a FREE Demo</a>
+          <a href="subjects.html" class="btn btn-outline">Our Subjects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item"><strong>500+</strong><span>Students Served</span></div>
+      <div class="stat-item"><strong>14+</strong><span>Countries</span></div>
+      <div class="stat-item"><strong>10+</strong><span>Curricula Covered</span></div>
+      <div class="stat-item"><strong>4.9★</strong><span>Average Rating</span></div>
+    </div>
+  </div>
+</div>
+
+<section style="background:var(--cream)">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Our Values</span>
+      <h2 class="section-title">What Drives Us Every Day</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="values-grid" style="margin-top:48px">
+      <div class="card value-card">
+        <div class="value-icon">🎯</div>
+        <h3>Precision</h3>
+        <p>Like the archer in our logo, we target exactly what each student needs — no wasted time, no generic content.</p>
+      </div>
+      <div class="card value-card">
+        <div class="value-icon">💡</div>
+        <h3>Curiosity</h3>
+        <p>We don't just teach to the test. We nurture genuine curiosity so students understand subjects deeply and love learning.</p>
+      </div>
+      <div class="card value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Partnership</h3>
+        <p>We work closely with parents, not just students. Regular updates and open communication are non-negotiable for us.</p>
+      </div>
+      <div class="card value-card">
+        <div class="value-icon">🌱</div>
+        <h3>Growth</h3>
+        <p>Every child can grow academically. We identify where they are and build a clear path to where they want to be.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Our Tutors</span>
+      <h2 class="section-title">Expert Educators, Hand-Picked</h2>
+      <div class="gold-bar"></div>
+      <p class="section-sub" style="margin-top:16px">Every BSR tutor holds a subject-specific degree, has real-world international curriculum experience, and passes our rigorous selection process.</p>
+    </div>
+    <div class="team-grid" style="margin-top:48px">
+      <div class="card team-card">
+        <div class="team-avatar">📐</div>
+        <h3>IB Mathematics</h3>
+        <div class="role">IB HL & SL Specialist</div>
+        <p>Degree in Mathematics from a top-ranked university. 6+ years teaching IB students in Singapore and Dubai.</p>
+      </div>
+      <div class="card team-card">
+        <div class="team-avatar">🔬</div>
+        <h3>Sciences</h3>
+        <div class="role">IGCSE & A-Level Expert</div>
+        <p>Chemistry and Biology graduate. Specialist in IGCSE, GCSE, and Cambridge A-Level science subjects.</p>
+      </div>
+      <div class="card team-card">
+        <div class="team-avatar">📖</div>
+        <h3>English & Literature</h3>
+        <div class="role">Language & Literature</div>
+        <p>English Literature graduate. Expert in IB Language A & B, IGCSE English, and CBSE/ICSE English.</p>
+      </div>
+      <div class="card team-card">
+        <div class="team-avatar">💻</div>
+        <h3>Computer Science</h3>
+        <div class="role">CS & Programming</div>
+        <p>Software engineering background. Teaches Python, Java, Scratch, and CS theory across IB, AP, and IGCSE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy);color:#fff;text-align:center">
+  <div class="container">
+    <span class="section-label" style="background:rgba(245,166,35,.2);color:var(--gold-light)">Join Us</span>
+    <h2 style="color:#fff;margin:16px 0">Ready to Experience the BSR Difference?</h2>
+    <p style="color:rgba(255,255,255,.7);max-width:540px;margin:0 auto 36px">Book a free, no-obligation demo class. Meet your tutor, see our approach, and decide with confidence.</p>
+    <a href="demo.html" class="btn btn-primary">🎓 Book FREE Demo Class</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="BSR Logo">
+        <p>Empowering students worldwide through personalised one-to-one online tutoring.</p>
+        <div class="social-links" style="margin-top:20px">
+          <a href="#" style="font-size:1rem">📸</a><a href="#" style="font-size:1rem">📘</a>
+          <a href="#" style="font-size:1rem">▶️</a><a href="#" style="font-size:1rem">🔗</a>
+          <a href="https://wa.me/918318830632" style="font-size:1rem">💬</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="subjects.html">Subjects</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="demo.html">Book Demo</a></li></ul></div>
+      <div class="footer-col"><h4>Subjects</h4><ul><li><a href="subjects.html">Mathematics</a></li><li><a href="subjects.html">Sciences</a></li><li><a href="subjects.html">English</a></li><li><a href="subjects.html">Computer Science</a></li><li><a href="subjects.html">Languages</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/918318830632">+91 8318830632</a></li><li><a href="mailto:bsrglobalacademy@gmail.com">bsrglobalacademy@gmail.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 BSR Global Education Academy.</p><p>One-to-One Online Classes Worldwide 🌍</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918318830632" class="whatsapp-fab" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.style.boxShadow=window.scrollY>20?'0 4px 24px rgba(0,0,0,.1)':'none';});
+document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+</script>
+</body>
+</html>

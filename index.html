@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSR Global Education Academy | One-to-One Online Tutoring Worldwide</title>
+<meta name="description" content="Premium one-to-one online tutoring for IB, IGCSE, CBSE, AP and more. Serving students in USA, UK, Australia, UAE and 14+ countries. Book a FREE demo class today.">
+<meta name="keywords" content="online tutoring, IB tutor, IGCSE tutor, CBSE, one-to-one, BSR Global Education Academy">
+<meta property="og:title" content="BSR Global Education Academy">
+<meta property="og:description" content="Personalised online tutoring for global curricula. Book your FREE demo today.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #0B2E5A 0%, #1A4FA0 55%, #1a5fa8 100%);
+  display: flex; align-items: center; position: relative; overflow: hidden;
+  padding-top: 80px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-orb {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,.25), transparent 70%);
+}
+.hero-orb-1 { width: 500px; height: 500px; top: -100px; right: -100px; }
+.hero-orb-2 { width: 300px; height: 300px; bottom: 50px; left: -50px; }
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  align-items: center; max-width: 1200px; margin: 0 auto; padding: 60px 24px; position: relative;
+}
+.hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(245,166,35,.18); color: var(--gold-light);
+  padding: 8px 20px; border-radius: 50px; font-size: .82rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px;
+}
+.hero-label::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--gold); }
+.hero h1 { color: #fff; margin-bottom: 20px; }
+.hero h1 em { color: var(--gold-light); font-style: italic; font-family: 'Lora', serif; }
+.hero p   { color: rgba(255,255,255,.78); font-size: 1.1rem; margin-bottom: 36px; max-width: 520px; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-stats {
+  display: flex; gap: 32px; margin-top: 52px;
+  padding-top: 32px; border-top: 1px solid rgba(255,255,255,.15);
+}
+.hero-stat strong { display: block; font-size: 2rem; font-weight: 800; color: var(--gold-light); }
+.hero-stat span   { font-size: .82rem; color: rgba(255,255,255,.6); font-weight: 500; }
+.hero-visual {
+  background: rgba(255,255,255,.07); border-radius: 24px; padding: 36px;
+  border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px);
+}
+.hero-card {
+  background: #fff; border-radius: 16px; padding: 20px 24px;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 16px;
+}
+.hero-card:last-child { margin-bottom: 0; }
+.hero-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+.hero-card h4 { color: var(--navy); font-size: .95rem; margin-bottom: 4px; }
+.hero-card p  { color: var(--muted); font-size: .82rem; margin: 0; }
+
+/* ── Ticker ── */
+.ticker { background: var(--gold); padding: 12px 0; overflow: hidden; }
+.ticker-track { display: flex; animation: ticker-scroll 25s linear infinite; white-space: nowrap; }
+.ticker-item  { padding: 0 48px; font-weight: 700; font-size: .9rem; color: var(--navy); }
+@keyframes ticker-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── Why BSR ── */
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.why-card { padding: 32px; }
+.why-icon { font-size: 2.2rem; margin-bottom: 20px; }
+.why-card h3 { color: var(--navy); margin-bottom: 12px; }
+
+/* ── Countries ── */
+.countries-section { background: var(--cream); }
+.country-flags { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 40px; }
+.country-pill {
+  display: flex; align-items: center; gap: 10px; background: var(--white);
+  padding: 12px 22px; border-radius: 50px; box-shadow: var(--shadow);
+  font-weight: 600; font-size: .92rem; color: var(--navy);
+  border: 1px solid var(--border);
+}
+
+/* ── Testimonials ── */
+.testimonials-section { background: var(--navy); }
+.testimonials-section .section-label { background: rgba(245,166,35,.2); color: var(--gold-light); }
+.testimonials-section .section-title { color: var(--white); }
+.testimonials-section .section-sub   { color: rgba(255,255,255,.6); }
+.carousel-wrap { position: relative; overflow: hidden; }
+.carousel-track { display: flex; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+.testimonial-card {
+  min-width: 100%; padding: 0 16px;
+}
+.testimonial-inner {
+  max-width: 700px; margin: 0 auto;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px; padding: 48px; text-align: center;
+}
+.stars { color: var(--gold); font-size: 1.4rem; margin-bottom: 24px; }
+.testimonial-inner p { color: rgba(255,255,255,.85); font-size: 1.1rem; font-style: italic; font-family: 'Lora', serif; line-height: 1.8; margin-bottom: 28px; }
+.testimonial-author strong { color: var(--white); display: block; }
+.testimonial-author span { color: var(--gold-light); font-size: .88rem; }
+.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 36px; }
+.carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.25); border: none; cursor: pointer; transition: var(--transition); }
+.carousel-dot.active { background: var(--gold); width: 28px; border-radius: 5px; }
+.carousel-btns { display: flex; justify-content: center; gap: 16px; margin-top: 24px; }
+.carousel-btn {
+  width: 48px; height: 48px; border-radius: 50%; border: 2px solid rgba(255,255,255,.3);
+  background: transparent; color: #fff; font-size: 1.2rem; cursor: pointer;
+  transition: var(--transition); display: flex; align-items: center; justify-content: center;
+}
+.carousel-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+/* ── FAQ ── */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 0; font-size: 1rem; font-weight: 600; color: var(--navy);
+  font-family: inherit; gap: 16px;
+}
+.faq-q .icon { font-size: 1.2rem; transition: var(--transition); flex-shrink: 0; }
+.faq-q.open .icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.faq-a p { padding-bottom: 24px; color: var(--muted); }
+
+/* ── CTA Banner ── */
+.cta-banner {
+  background: linear-gradient(135deg, var(--navy), var(--royal));
+  border-radius: 24px; padding: 64px; text-align: center;
+  margin: 0 24px; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: '✦'; position: absolute; font-size: 8rem; opacity: .05;
+  top: -20px; right: 40px; color: var(--gold);
+}
+.cta-banner h2 { color: #fff; }
+.cta-banner p  { color: rgba(255,255,255,.75); font-size: 1.1rem; margin: 16px auto 36px; max-width: 560px; }
+.cta-banner .btn-primary { font-size: 1rem; padding: 16px 36px; }
+.cta-section { padding: 80px 0; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .hero-stats  { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="BSR Global Education Academy Logo">
+      <div class="nav-logo-text">
+        <strong>BSR Global</strong>
+        <span>Education Academy</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="demo.html" class="btn btn-primary">Book Free Demo</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-label">🏆 Trusted by 500+ Students Worldwide</div>
+      <h1>Learn from the<br><em>World's Best</em><br>from Anywhere</h1>
+      <p>Personalised one-to-one online tutoring for IB, IGCSE, CBSE, AP and 10+ international curricula — taught by expert tutors across every time zone.</p>
+      <div class="hero-actions">
+        <a href="demo.html" class="btn btn-primary">🎓 Book FREE Demo Class</a>
+        <a href="subjects.html" class="btn btn-secondary">Explore Subjects</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>500+</strong><span>Students Served</span></div>
+        <div class="hero-stat"><strong>14+</strong><span>Countries</span></div>
+        <div class="hero-stat"><strong>10+</strong><span>Curricula</span></div>
+        <div class="hero-stat"><strong>4.9★</strong><span>Avg. Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-icon" style="background:#EEF4FF">📐</div>
+        <div><h4>Mathematics — IB HL</h4><p>Aryan S. • Singapore • Score: 7/7</p></div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon" style="background:#FFF7E6">🔬</div>
+        <div><h4>Chemistry — IGCSE A*</h4><p>Priya M. • UK • Grade: A*</p></div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon" style="background:#E8F5E9">💻</div>
+        <div><h4>Computer Science — AP</h4><p>Liam K. • USA • Score: 5/5</p></div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon" style="background:#FFF0F0">📖</div>
+        <div><h4>English Literature</h4><p>Fatima A. • UAE • A-Level A</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">🇺🇸 USA</span><span class="ticker-item">🇬🇧 UK</span>
+    <span class="ticker-item">🇦🇺 Australia</span><span class="ticker-item">🇸🇬 Singapore</span>
+    <span class="ticker-item">🇦🇪 UAE</span><span class="ticker-item">🇨🇦 Canada</span>
+    <span class="ticker-item">🇳🇿 New Zealand</span><span class="ticker-item">🇰🇷 South Korea</span>
+    <span class="ticker-item">🇶🇦 Qatar</span><span class="ticker-item">🇮🇳 India</span>
+    <span class="ticker-item">🇸🇦 Saudi Arabia</span><span class="ticker-item">🇴🇲 Oman</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">🇺🇸 USA</span><span class="ticker-item">🇬🇧 UK</span>
+    <span class="ticker-item">🇦🇺 Australia</span><span class="ticker-item">🇸🇬 Singapore</span>
+    <span class="ticker-item">🇦🇪 UAE</span><span class="ticker-item">🇨🇦 Canada</span>
+    <span class="ticker-item">🇳🇿 New Zealand</span><span class="ticker-item">🇰🇷 South Korea</span>
+    <span class="ticker-item">🇶🇦 Qatar</span><span class="ticker-item">🇮🇳 India</span>
+    <span class="ticker-item">🇸🇦 Saudi Arabia</span><span class="ticker-item">🇴🇲 Oman</span>
+  </div>
+</div>
+
+<!-- Why BSR -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Why Choose BSR</span>
+      <h2 class="section-title">Learning That's Built Around You</h2>
+      <div class="gold-bar"></div>
+      <p class="section-sub" style="margin-top:16px">We don't do one-size-fits-all. Every session is tailored to your child's pace, goals, and learning style.</p>
+    </div>
+    <div class="why-grid" style="margin-top:48px">
+      <div class="card why-card">
+        <div class="why-icon">🎯</div>
+        <h3>One-to-One Attention</h3>
+        <p>No distractions, no waiting. Your child gets 100% of the tutor's focus every single session.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">🌍</div>
+        <h3>Global Curriculum Experts</h3>
+        <p>Specialists in IB, IGCSE, CBSE, AP, Australian and more — always matched to your board.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">🕐</div>
+        <h3>Flexible Scheduling</h3>
+        <p>Morning, evening, weekends — we work across all time zones to fit your family's schedule.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">📊</div>
+        <h3>Progress Tracking</h3>
+        <p>Regular reports and parent meetings keep you informed of every milestone and improvement.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">📝</div>
+        <h3>Homework Support</h3>
+        <p>Assignment help, exam prep, and concept revision — we cover it all between sessions too.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">⭐</div>
+        <h3>Proven Results</h3>
+        <p>Our students consistently achieve top grades across competitive boards and international exams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Countries -->
+<section class="countries-section">
+  <div class="container text-center">
+    <span class="section-label">Global Reach</span>
+    <h2 class="section-title">Students We Serve Worldwide</h2>
+    <div class="gold-bar"></div>
+    <div class="country-flags">
+      <div class="country-pill">🇺🇸 USA</div>
+      <div class="country-pill">🇬🇧 UK</div>
+      <div class="country-pill">🇨🇦 Canada</div>
+      <div class="country-pill">🇦🇺 Australia</div>
+      <div class="country-pill">🇳🇿 New Zealand</div>
+      <div class="country-pill">🇸🇬 Singapore</div>
+      <div class="country-pill">🇰🇷 South Korea</div>
+      <div class="country-pill">🇦🇪 UAE</div>
+      <div class="country-pill">🇸🇦 Saudi Arabia</div>
+      <div class="country-pill">🇶🇦 Qatar</div>
+      <div class="country-pill">🇴🇲 Oman</div>
+      <div class="country-pill">🇰🇼 Kuwait</div>
+      <div class="country-pill">🇧🇭 Bahrain</div>
+      <div class="country-pill">🇮🇳 India</div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Student Stories</span>
+      <h2 class="section-title">Results That Speak for Themselves</h2>
+      <div class="gold-bar"></div>
+      <p class="section-sub" style="margin-top:16px">Hear from families across the globe who trusted BSR with their children's education.</p>
+    </div>
+    <div class="carousel-wrap" style="margin-top:48px">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="stars">★★★★★</div>
+            <p>"My son went from failing his IB Mathematics HL to scoring a 6 in just three months. The tutor identified his exact weak spots and built up his confidence step by step. BSR is genuinely the best investment we've made in his education."</p>
+            <div class="testimonial-author"><strong>Meera Nair</strong><span>Parent — Singapore 🇸🇬 | IB Mathematics HL</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="stars">★★★★★</div>
+            <p>"The flexibility is incredible. Our daughter studies in the UK and we're in Dubai — BSR schedules sessions perfectly across both time zones. Her IGCSE Chemistry went from a C to an A* in one term."</p>
+            <div class="testimonial-author"><strong>Ahmed Al-Rashidi</strong><span>Parent — Dubai, UAE 🇦🇪 | IGCSE Chemistry</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="stars">★★★★★</div>
+            <p>"BSR helped me ace my SAT with a 1520 score. The sessions were super focused — no wasted time. My tutor knew exactly which question types I struggled with and drilled them until I felt completely ready."</p>
+            <div class="testimonial-author"><strong>Tyler Johnson</strong><span>Student — Texas, USA 🇺🇸 | SAT Prep</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-inner">
+            <div class="stars">★★★★★</div>
+            <p>"My daughter's English Literature results have transformed completely. The tutor makes literary analysis feel natural and even enjoyable. We couldn't be happier with BSR — the regular parent updates are a lovely touch."</p>
+            <div class="testimonial-author"><strong>Priya Krishnamurthy</strong><span>Parent — Melbourne, Australia 🇦🇺 | A-Level English</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-btns">
+      <button class="carousel-btn" id="prevBtn">&#8592;</button>
+      <button class="carousel-btn" id="nextBtn">&#8594;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Questions We Hear Most</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="faq-list" style="margin-top:48px">
+      <div class="faq-item">
+        <button class="faq-q">How does the free demo class work? <span class="icon">+</span></button>
+        <div class="faq-a"><p>You book a 45-minute session at no cost. A tutor will meet your child, assess their current level, explain our approach, and answer any questions. There's no obligation to continue.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What platforms do you use for online classes? <span class="icon">+</span></button>
+        <div class="faq-a"><p>We primarily use Zoom with an interactive whiteboard. All sessions can be recorded for review. We adapt to the student's preferred platform on request.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How are tutors selected and vetted? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Every BSR tutor holds a subject-specific degree and has proven teaching experience with international curricula. They go through a rigorous interview, demo lesson, and background check before joining our team.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can we switch tutors if the fit isn't right? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Absolutely. We want every student to thrive. If for any reason the tutor isn't the perfect fit, just let us know and we'll arrange a new match at no extra cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer group classes or only one-to-one? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Our core offering is one-to-one because we believe it drives the best results. We do offer small-group workshops (2–3 students) for competitive exam prep on request.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What age groups do you teach? <span class="icon">+</span></button>
+        <div class="faq-a"><p>We teach students from Grade 1 through to A-Level / Year 12, covering primary, middle school, and senior secondary across all major international and national boards.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-banner">
+    <h2>Ready to Transform Your Child's Results?</h2>
+    <p>Join 500+ students worldwide who've achieved their academic goals with BSR. Your FREE demo class is one click away.</p>
+    <a href="demo.html" class="btn btn-primary">🎓 Book My FREE Demo Class</a>
+    <p style="margin-top:20px;font-size:.88rem;color:rgba(255,255,255,.5)">📱 +91 8318830632 &nbsp;|&nbsp; 📧 bsrglobalacademy@gmail.com</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="BSR Logo">
+        <p>Empowering students worldwide through personalised one-to-one online tutoring. Building strong concepts, creating global success stories.</p>
+        <div class="social-links" style="margin-top:20px">
+          <a href="#" title="Instagram" style="font-size:1rem">📸</a>
+          <a href="#" title="Facebook"  style="font-size:1rem">📘</a>
+          <a href="#" title="YouTube"   style="font-size:1rem">▶️</a>
+          <a href="#" title="LinkedIn"  style="font-size:1rem">🔗</a>
+          <a href="https://wa.me/918318830632" title="WhatsApp" style="font-size:1rem">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="subjects.html">Subjects</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="demo.html">Book Demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Subjects</h4>
+        <ul>
+          <li><a href="subjects.html">Mathematics</a></li>
+          <li><a href="subjects.html">Sciences</a></li>
+          <li><a href="subjects.html">English</a></li>
+          <li><a href="subjects.html">Computer Science</a></li>
+          <li><a href="subjects.html">Languages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/918318830632">WhatsApp: +91 8318830632</a></li>
+          <li><a href="mailto:bsrglobalacademy@gmail.com">bsrglobalacademy@gmail.com</a></li>
+          <li><a href="demo.html">Book Free Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BSR Global Education Academy. All rights reserved.</p>
+      <p>One-to-One Online Classes Worldwide 🌍</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/918318830632" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,.1)' : 'none';
+});
+// Mobile toggle
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+// Carousel
+const track = document.getElementById('carouselTrack');
+const dots  = document.getElementById('carouselDots');
+const cards = track.children.length;
+let cur = 0;
+for(let i=0;i<cards;i++){
+  const d = document.createElement('button');
+  d.className = 'carousel-dot' + (i===0?' active':'');
+  d.addEventListener('click', ()=>goTo(i));
+  dots.appendChild(d);
+}
+function goTo(n){ cur=n; track.style.transform=`translateX(-${n*100}%)`; document.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===n)); }
+document.getElementById('prevBtn').addEventListener('click',()=>goTo((cur-1+cards)%cards));
+document.getElementById('nextBtn').addEventListener('click',()=>goTo((cur+1)%cards));
+setInterval(()=>goTo((cur+1)%cards), 5000);
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const ans = btn.nextElementSibling;
+    const open = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(b=>{ b.classList.remove('open'); b.nextElementSibling.style.maxHeight='0'; });
+    if(!open){ btn.classList.add('open'); ans.style.maxHeight = ans.scrollHeight+'px'; }
+  });
+});
+</script>
+</body>
+</html>

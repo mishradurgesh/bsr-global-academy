@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subjects | BSR Global Education Academy</title>
+<meta name="description" content="BSR offers one-to-one online tutoring in Mathematics, Sciences, English, Computer Science, Languages, and Communication Skills across all major international boards.">
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero { background:linear-gradient(145deg,#0B2E5A 0%,#1A4FA0 100%); padding:140px 0 80px; text-align:center; color:#fff; }
+.page-hero h1 { color:#fff; margin-bottom:16px; }
+.page-hero p  { color:rgba(255,255,255,.75); font-size:1.15rem; max-width:600px; margin:0 auto; }
+.breadcrumb { display:flex; justify-content:center; gap:8px; font-size:.85rem; color:rgba(255,255,255,.5); margin-bottom:24px; }
+.breadcrumb a { color:var(--gold-light); text-decoration:none; }
+
+.subject-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:48px; }
+.tab { padding:10px 22px; border-radius:50px; border:2px solid var(--border); background:transparent; cursor:pointer; font-weight:600; font-size:.9rem; color:var(--muted); transition:var(--transition); font-family:inherit; }
+.tab:hover, .tab.active { background:var(--navy); border-color:var(--navy); color:#fff; }
+
+.subject-panel { display:none; }
+.subject-panel.active { display:block; }
+
+.subject-hero-card {
+  display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;
+  background:var(--cream); border-radius:24px; padding:48px; margin-bottom:48px;
+}
+.subject-icon-big { font-size:6rem; text-align:center; }
+.subject-topics { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+.topic-tag {
+  background:var(--white); border:1px solid var(--border); border-radius:50px;
+  padding:6px 16px; font-size:.85rem; font-weight:500; color:var(--navy);
+}
+.sub-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.sub-card { padding:24px; text-align:center; }
+.sub-card .icon { font-size:1.8rem; margin-bottom:12px; }
+.sub-card h4 { color:var(--navy); margin-bottom:8px; }
+
+.exam-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:16px; }
+.exam-card { text-align:center; padding:28px 16px; background:var(--white); border:1px solid var(--border); border-radius:16px; }
+.exam-card .badge { font-size:2rem; margin-bottom:12px; }
+.exam-card h4 { color:var(--navy); font-size:1rem; }
+.exam-card p { font-size:.82rem; }
+
+@media (max-width:768px) {
+  .subject-hero-card { grid-template-columns:1fr; }
+  .subject-icon-big  { font-size:4rem; }
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="BSR Global Education Academy Logo">
+      <div class="nav-logo-text"><strong>BSR Global</strong><span>Education Academy</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="subjects.html" class="active">Subjects</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="demo.html" class="btn btn-primary">Book Free Demo</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Subjects</div>
+  <h1>Our Subjects</h1>
+  <p>Expert one-to-one tutoring across every subject your child needs — from primary foundations to senior-secondary mastery.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="subject-tabs">
+      <button class="tab active" data-panel="maths">📐 Mathematics</button>
+      <button class="tab" data-panel="science">🔬 Science</button>
+      <button class="tab" data-panel="english">📖 English</button>
+      <button class="tab" data-panel="cs">💻 Computer Science</button>
+      <button class="tab" data-panel="languages">🗣️ Languages</button>
+      <button class="tab" data-panel="comms">🎤 Communication</button>
+      <button class="tab" data-panel="exams">🏆 Exam Prep</button>
+    </div>
+
+    <!-- MATHS -->
+    <div class="subject-panel active" id="panel-maths">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">Mathematics</span>
+          <h2 class="section-title" style="font-size:1.9rem">From Fractions to Calculus</h2>
+          <p>Our maths tutors break complex concepts into clear, logical steps. Students build deep understanding — not just exam tricks — so they can tackle any problem confidently.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Algebra</span><span class="topic-tag">Geometry</span><span class="topic-tag">Trigonometry</span>
+            <span class="topic-tag">Calculus</span><span class="topic-tag">Statistics</span><span class="topic-tag">Probability</span>
+            <span class="topic-tag">Number Theory</span><span class="topic-tag">Vectors</span><span class="topic-tag">Matrices</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">📐</div>
+      </div>
+      <div class="sub-cards">
+        <div class="card sub-card"><div class="icon">📊</div><h4>IB Mathematics HL/SL</h4><p>Analysis & Approaches and Applications & Interpretation — exam strategy, IA support, past papers.</p></div>
+        <div class="card sub-card"><div class="icon">🔢</div><h4>IGCSE / GCSE Maths</h4><p>Edexcel, Cambridge, AQA — all topics covered with targeted practice questions.</p></div>
+        <div class="card sub-card"><div class="icon">🇺🇸</div><h4>SAT / AP Calculus</h4><p>Focused SAT Math preparation and AP Calculus AB/BC with proven score-boosting strategies.</p></div>
+        <div class="card sub-card"><div class="icon">🇮🇳</div><h4>CBSE / ICSE Maths</h4><p>Grades 6–12, complete syllabus coverage with board exam preparation and sample papers.</p></div>
+      </div>
+    </div>
+
+    <!-- SCIENCE -->
+    <div class="subject-panel" id="panel-science">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">Science</span>
+          <h2 class="section-title" style="font-size:1.9rem">Understand, Don't Memorise</h2>
+          <p>Science should make sense. Our tutors connect theory to the real world, making Physics, Chemistry, and Biology genuinely interesting — and much easier to remember.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Physics</span><span class="topic-tag">Chemistry</span><span class="topic-tag">Biology</span>
+            <span class="topic-tag">Organic Chem</span><span class="topic-tag">Mechanics</span><span class="topic-tag">Genetics</span>
+            <span class="topic-tag">Thermodynamics</span><span class="topic-tag">Ecology</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">🔬</div>
+      </div>
+      <div class="sub-cards">
+        <div class="card sub-card"><div class="icon">⚛️</div><h4>Physics</h4><p>IB, IGCSE, A-Level, CBSE — from kinematics to quantum physics, explained clearly.</p></div>
+        <div class="card sub-card"><div class="icon">🧪</div><h4>Chemistry</h4><p>Organic, inorganic, and physical chemistry with lab report writing and IA guidance for IB.</p></div>
+        <div class="card sub-card"><div class="icon">🧬</div><h4>Biology</h4><p>Cell biology, human physiology, ecology, genetics — with diagram and essay techniques.</p></div>
+        <div class="card sub-card"><div class="icon">🌎</div><h4>General Science</h4><p>Primary and middle-school science across all boards — building solid foundations early.</p></div>
+      </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="subject-panel" id="panel-english">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">English</span>
+          <h2 class="section-title" style="font-size:1.9rem">Words That Win Marks</h2>
+          <p>Whether it's essay writing, literary analysis, or language skills, our English tutors give students the vocabulary, structure, and critical thinking to excel in any assignment.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Grammar</span><span class="topic-tag">Essay Writing</span><span class="topic-tag">Literary Analysis</span>
+            <span class="topic-tag">Reading Comprehension</span><span class="topic-tag">Creative Writing</span><span class="topic-tag">Poetry</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">📖</div>
+      </div>
+      <div class="sub-cards">
+        <div class="card sub-card"><div class="icon">📝</div><h4>IB Language & Literature</h4><p>Language A and B — text analysis, comparative essays, oral commentary preparation.</p></div>
+        <div class="card sub-card"><div class="icon">📚</div><h4>IGCSE English</h4><p>Language and Literature — comprehension, directed writing, and essay technique.</p></div>
+        <div class="card sub-card"><div class="icon">✍️</div><h4>A-Level English</h4><p>Close reading, unseen texts, coursework, and exam essay writing strategies.</p></div>
+        <div class="card sub-card"><div class="icon">🇮🇳</div><h4>CBSE / ICSE English</h4><p>Grammar, literature, and writing for Grades 6–12 on the Indian national boards.</p></div>
+      </div>
+    </div>
+
+    <!-- CS -->
+    <div class="subject-panel" id="panel-cs">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">Computer Science</span>
+          <h2 class="section-title" style="font-size:1.9rem">Code. Create. Innovate.</h2>
+          <p>From Scratch to Python to full-stack development — our CS tutors teach both the theory and the hands-on skills that universities and future employers want to see.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Python</span><span class="topic-tag">Java</span><span class="topic-tag">Scratch</span>
+            <span class="topic-tag">HTML/CSS</span><span class="topic-tag">JavaScript</span><span class="topic-tag">Algorithms</span>
+            <span class="topic-tag">Data Structures</span><span class="topic-tag">Databases</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">💻</div>
+      </div>
+      <div class="sub-cards">
+        <div class="card sub-card"><div class="icon">🐍</div><h4>Python Programming</h4><p>Beginner to advanced — algorithms, OOP, data science basics, and project work.</p></div>
+        <div class="card sub-card"><div class="icon">☕</div><h4>Java</h4><p>AP Computer Science A, IB CS, and IGCSE CS — Java programming with exam focus.</p></div>
+        <div class="card sub-card"><div class="icon">🌐</div><h4>Web Development</h4><p>HTML, CSS, JavaScript for students wanting to build real projects alongside coursework.</p></div>
+        <div class="card sub-card"><div class="icon">🎮</div><h4>Scratch & Visual</h4><p>Fun, project-based coding for younger students building computational thinking skills.</p></div>
+      </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="subject-panel" id="panel-languages">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">Languages</span>
+          <h2 class="section-title" style="font-size:1.9rem">New Language, New World</h2>
+          <p>Learning a new language opens doors. Our language tutors make every session conversational, practical, and genuinely enjoyable for students of all ages.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Hindi</span><span class="topic-tag">Sanskrit</span><span class="topic-tag">German</span>
+            <span class="topic-tag">Reading</span><span class="topic-tag">Writing</span><span class="topic-tag">Conversation</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">🗣️</div>
+      </div>
+      <div class="sub-cards">
+        <div class="card sub-card"><div class="icon">🇮🇳</div><h4>Hindi</h4><p>CBSE Hindi A & B, grammar, literature, and writing for all grade levels.</p></div>
+        <div class="card sub-card"><div class="icon">📜</div><h4>Sanskrit</h4><p>Classical Sanskrit grammar, translation, and literature for CBSE students.</p></div>
+        <div class="card sub-card"><div class="icon">🇩🇪</div><h4>German</h4><p>Beginner to B2 level — speaking, writing, grammar, and exam preparation.</p></div>
+      </div>
+    </div>
+
+    <!-- COMMS -->
+    <div class="subject-panel" id="panel-comms">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">Communication Skills</span>
+          <h2 class="section-title" style="font-size:1.9rem">Speak with Confidence</h2>
+          <p>Academic success is about more than grades. The ability to communicate clearly and confidently is a life skill — one we actively develop in every student we work with.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Public Speaking</span><span class="topic-tag">Debate</span><span class="topic-tag">Presentation Skills</span>
+            <span class="topic-tag">Interview Preparation</span><span class="topic-tag">Confidence Building</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">🎤</div>
+      </div>
+      <div class="sub-cards">
+        <div class="card sub-card"><div class="icon">🎙️</div><h4>Public Speaking</h4><p>Eliminate anxiety, structure speeches clearly, and command any room.</p></div>
+        <div class="card sub-card"><div class="icon">💬</div><h4>Debate & Discussion</h4><p>Build argumentative reasoning skills for IB TOK, MUN, and school debates.</p></div>
+        <div class="card sub-card"><div class="icon">🖥️</div><h4>Presentation Skills</h4><p>Design compelling presentations and deliver them with poise and clarity.</p></div>
+      </div>
+    </div>
+
+    <!-- EXAMS -->
+    <div class="subject-panel" id="panel-exams">
+      <div class="subject-hero-card">
+        <div>
+          <span class="section-label">Competitive Exam Preparation</span>
+          <h2 class="section-title" style="font-size:1.9rem">Score Higher, Get Further</h2>
+          <p>Entrance exam results can define a student's future. Our specialists know exactly what these tests demand — and deliver targeted preparation that moves the needle.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">SAT</span><span class="topic-tag">PSAT</span><span class="topic-tag">ACT</span>
+            <span class="topic-tag">AP Courses</span><span class="topic-tag">AMC</span><span class="topic-tag">Olympiads</span>
+            <span class="topic-tag">Scholarship Exams</span>
+          </div>
+        </div>
+        <div class="subject-icon-big">🏆</div>
+      </div>
+      <div class="exam-grid">
+        <div class="exam-card"><div class="badge">📝</div><h4>SAT</h4><p>Math & Evidence-Based Reading</p></div>
+        <div class="exam-card"><div class="badge">📋</div><h4>PSAT</h4><p>National Merit Scholarship prep</p></div>
+        <div class="exam-card"><div class="badge">📊</div><h4>ACT</h4><p>English, Math, Science, Reading</p></div>
+        <div class="exam-card"><div class="badge">🎓</div><h4>AP Courses</h4><p>All major AP subjects</p></div>
+        <div class="exam-card"><div class="badge">🔢</div><h4>AMC 8/10/12</h4><p>American Mathematics Competitions</p></div>
+        <div class="exam-card"><div class="badge">🌍</div><h4>Olympiads</h4><p>Math, Science, Informatics</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy);text-align:center;padding:80px 0">
+  <div class="container">
+    <h2 style="color:#fff;margin-bottom:16px">Not Sure Which Subject?</h2>
+    <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 32px">Book a free demo and we'll assess your child's needs and recommend the right subjects and tutors.</p>
+    <a href="demo.html" class="btn btn-primary">🎓 Book FREE Demo Class</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="logo.jpg" alt="BSR Logo"><p>Personalised one-to-one online tutoring for students worldwide.</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="subjects.html">Subjects</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="demo.html">Book Demo</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/918318830632">+91 8318830632</a></li><li><a href="mailto:bsrglobalacademy@gmail.com">bsrglobalacademy@gmail.com</a></li></ul></div>
+      <div class="footer-col"><h4>Social</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 BSR Global Education Academy.</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918318830632" class="whatsapp-fab" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.style.boxShadow=window.scrollY>20?'0 4px 24px rgba(0,0,0,.1)':'none';});
+document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.subject-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-'+tab.dataset.panel).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
