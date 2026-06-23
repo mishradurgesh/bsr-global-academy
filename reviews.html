@@ -77,6 +77,8 @@
 }
 .photo-slot:hover { border-color:var(--royal); background:rgba(26,79,160,.04); }
 .photo-slot .upload-icon { font-size:2rem; margin-bottom:8px; }
+.photo-slot.real-review { border:none; background:transparent; padding:0; cursor:zoom-in; overflow:hidden; border-radius:16px; box-shadow:var(--shadow); }
+.photo-slot.real-review:hover { transform:scale(1.02); box-shadow:var(--shadow-lg); transition:var(--transition); }
 
 .contact-share { background:linear-gradient(135deg,var(--navy),var(--royal)); border-radius:24px; padding:56px; text-align:center; }
 .contact-share h2 { color:#fff; margin-bottom:12px; }
@@ -161,172 +163,184 @@
   <div class="container">
     <div class="reviews-masonry" id="reviewsGrid">
 
-      <div class="card review-card featured" data-curriculum="ib">
+      <!-- Gurcharanjit Panesar — Google Review -->
+      <div class="card review-card featured" data-curriculum="all">
         <div class="review-header">
-          <div class="review-avatar">MN</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#1a5fa8,#2e7dd1)">GP</div>
           <div>
-            <div class="review-name">Meera Nair</div>
-            <div class="review-location">Singapore 🇸🇬 · Parent</div>
+            <div class="review-name">Gurcharanjit Panesar</div>
+            <div class="review-location">Parent · 3 reviews</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"My son went from failing his IB Mathematics HL to scoring a 6 in just three months. The tutor identified his exact weak spots and built up his confidence step by step. BSR is genuinely the best investment we've made in his education. I recommend them to every parent I know."</p>
-        <span class="review-subject">IB Mathematics HL</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+        <p class="review-text">"We enrolled our daughter for Science and Math tutoring, and we've had an excellent experience. The tutors here are truly passionate about teaching, especially her tutor Devesh, who has been outstanding. He takes the time to understand the student's current level and explains concepts in a way that's clear, patient, and relatable. Devesh genuinely cares about making sure she understands the fundamentals, and his passion for helping kids learn shows in every session. We've seen great improvement and confidence in her work. Highly recommend this tutoring center and their amazing team!"</p>
+        <span class="review-subject">Science & Mathematics</span>
+        <div class="platform-badge google">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Google Review
+        </div>
       </div>
 
+      <!-- Rajani Singh — Google Review (Local Guide) -->
+      <div class="card review-card featured" data-curriculum="all">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#c0392b,#e74c3c)">RS</div>
+          <div>
+            <div class="review-name">Rajani Singh</div>
+            <div class="review-location">Local Guide · 39 reviews · 13 photos</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Devesh is an outstanding tutor—highly intelligent, patient, and deeply committed to helping students succeed. What truly sets him apart is his ability to adapt his teaching style to each child's individual learning needs. He explains concepts clearly and makes even difficult topics easy to understand. His personalised approach builds confidence and keeps students engaged. I highly recommend Devesh to anyone looking for a knowledgeable and dedicated teacher."</p>
+        <span class="review-subject">General Tutoring</span>
+        <div class="platform-badge google">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Google Review · Local Guide
+        </div>
+      </div>
+
+      <!-- Zayan Ahmed — Google Review -->
+      <div class="card review-card" data-curriculum="all">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#8e44ad,#9b59b6)">ZA</div>
+          <div>
+            <div class="review-name">Zayan Ahmed</div>
+            <div class="review-location">Student · Google Review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Devesh Mishra is an absolutely amazing tutor! His teaching is incredibly effective, clear, and engaging — he has a way of breaking down even the most difficult concepts so that they make complete sense. Beyond his teaching skills, he is patient, encouraging, and genuinely cares about his students' progress. He always takes the time to answer questions thoroughly and makes learning enjoyable. His dedication, positivity, and supportive nature make him not only an excellent tutor but also a remarkable person. I feel very fortunate to have Devesh Mishra guiding me."</p>
+        <span class="review-subject">General Tutoring</span>
+        <div class="platform-badge google">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Google Review
+        </div>
+      </div>
+
+      <!-- Steve French — WhatsApp (UK, for Fin) -->
       <div class="card review-card" data-curriculum="igcse">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#c0392b,#e74c3c)">AR</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#2c3e50,#3498db)">SF</div>
           <div>
-            <div class="review-name">Ahmed Al-Rashidi</div>
-            <div class="review-location">Dubai, UAE 🇦🇪 · Parent</div>
+            <div class="review-name">Steve French</div>
+            <div class="review-location">UK 🇬🇧 · Parent</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The flexibility is incredible. Our daughter studies in the UK and we're in Dubai — BSR schedules sessions perfectly across both time zones. Her IGCSE Chemistry went from a C to an A* in one term. Exceptional tutors."</p>
-        <span class="review-subject">IGCSE Chemistry</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+        <p class="review-text">"Thanks for the last couple of weeks. I was really impressed with the sessions — the tutor explained everything clearly and at a good pace, checking that Fin understood before moving on. The teaching style was supportive and encouraging, which kept him engaged throughout. I also liked how the tutor broke problems down into manageable steps and gave Fin the chance to think through answers himself. Overall, it was a really positive session and I can see how this approach will continue to benefit him going forward."</p>
+        <span class="review-subject">Mathematics</span>
+        <div class="platform-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Feedback
+        </div>
       </div>
 
-      <div class="card review-card" data-curriculum="ap">
+      <!-- Madhavi — WhatsApp (USA, daughter Mahati, Math) -->
+      <div class="card review-card featured" data-curriculum="cbse">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#27ae60,#2ecc71)">TJ</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#27ae60,#2ecc71)">M</div>
           <div>
-            <div class="review-name">Tyler Johnson</div>
-            <div class="review-location">Texas, USA 🇺🇸 · Student</div>
+            <div class="review-name">Madhavi</div>
+            <div class="review-location">USA 🇺🇸 · Parent of Mahati</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"BSR helped me ace my SAT with a 1520 score. The sessions were super focused — no wasted time. My tutor knew exactly which question types I struggled with and drilled them until I felt completely ready."</p>
-        <span class="review-subject">SAT Prep · Grade 11</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
-      </div>
-
-      <div class="card review-card" data-curriculum="alevel">
-        <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#8e44ad,#9b59b6)">PK</div>
-          <div>
-            <div class="review-name">Priya Krishnamurthy</div>
-            <div class="review-location">Melbourne, Australia 🇦🇺 · Parent</div>
-          </div>
+        <p class="review-text">"Hello, I would like to express my sincere gratitude to Mr. Devesh for helping my daughter Mahati with her math skills. He is knowledgeable, patient and encouraging. Since his classes, she has become more confident with her studies. Thank you for your services and hope that you continue to inspire more students."</p>
+        <span class="review-subject">Mathematics</span>
+        <div class="platform-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Feedback
         </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"My daughter's English Literature results have transformed completely. The tutor makes literary analysis feel natural and even enjoyable. We couldn't be happier — the regular parent updates are a lovely touch too."</p>
-        <span class="review-subject">A-Level English Literature</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
       </div>
 
+      <!-- Shweta Mishra — Google Review (Math) -->
       <div class="card review-card" data-curriculum="cbse">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#e67e22,#f39c12)">RV</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#e67e22,#f39c12)">SM</div>
           <div>
-            <div class="review-name">Rahul Verma</div>
-            <div class="review-location">Bangalore, India 🇮🇳 · Parent</div>
+            <div class="review-name">Shweta Mishra</div>
+            <div class="review-location">Parent · Google Review</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"My daughter struggled with CBSE Class 10 Maths for over a year. After just 8 sessions with BSR, she scored 97/100 in her board exams. The tutor's patience and clear explanations made all the difference."</p>
-        <span class="review-subject">CBSE Mathematics · Class 10</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+        <p class="review-text">"My son truly enjoys learning math with Devesh sir. He has a unique way of teaching that makes even difficult concepts easy to understand. By using fun activities and engaging methods, he keeps the class lively and interesting. Thanks to his approach, my son looks forward to math lessons and has developed a genuine interest in the subject. We are grateful for his dedication and creative teaching style!"</p>
+        <span class="review-subject">Mathematics</span>
+        <div class="platform-badge google">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Google Review
+        </div>
       </div>
 
-      <div class="card review-card featured" data-curriculum="ib">
+      <!-- Siya Mahajan — Google Review (English) -->
+      <div class="card review-card" data-curriculum="all">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#2c3e50,#3498db)">SW</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">SY</div>
           <div>
-            <div class="review-name">Sarah Williams</div>
-            <div class="review-location">London, UK 🇬🇧 · Parent</div>
+            <div class="review-name">Siya Mahajan</div>
+            <div class="review-location">Student · Google Review</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"We tried three other tutoring services before BSR. Nothing comes close. The tutor took the time to understand my son's specific IB exam board requirements and tailored every session perfectly. He went from a 4 to a 7 in IB Biology."</p>
-        <span class="review-subject">IB Biology HL</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+        <p class="review-text">"Mr. Devesh is an outstanding English teacher! His dedication to his students is evident in the way he crafts engaging lessons that inspire a love for literature and language. He's knowledgeable, approachable, and always willing to lend a helping hand. His enthusiasm and passion for teaching make a real difference in the classroom, and his students are lucky to have him. Highly recommend!"</p>
+        <span class="review-subject">English Language & Literature</span>
+        <div class="platform-badge google">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Google Review
+        </div>
       </div>
 
+      <!-- Birgit — WhatsApp (UK, for Tom) -->
       <div class="card review-card" data-curriculum="igcse">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#16a085,#1abc9c)">FA</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#16a085,#1abc9c)">B</div>
           <div>
-            <div class="review-name">Fatima Al-Hassan</div>
-            <div class="review-location">Riyadh, Saudi Arabia 🇸🇦 · Parent</div>
+            <div class="review-name">Birgit</div>
+            <div class="review-location">UK 🇬🇧 · Parent of Tom</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"My son's confidence in Mathematics has grown enormously. His IGCSE mock results jumped from grade C to A. The tutor explains concepts so clearly — my son actually looks forward to his sessions now!"</p>
-        <span class="review-subject">IGCSE Mathematics</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
-      </div>
-
-      <div class="card review-card" data-curriculum="ib">
-        <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#1a5fa8,#2e7dd1)">AK</div>
-          <div>
-            <div class="review-name">Aryan Kumar</div>
-            <div class="review-location">Singapore 🇸🇬 · Student (IB DP)</div>
-          </div>
+        <p class="review-text">"Hi Devesh — thanks for having been Tom's tutor! We really appreciate all your help and support. Without you, Tom wouldn't have managed to get through his exams so well. I hope you'll have many new students in the next school year. All the best and thanks so much!"</p>
+        <span class="review-subject">Exam Preparation</span>
+        <div class="platform-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Feedback
         </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"I was really struggling with IB Chemistry HL and my IA. My BSR tutor not only helped me understand the core concepts but guided me through my internal assessment step by step. Got a 7! Couldn't have done it without BSR."</p>
-        <span class="review-subject">IB Chemistry HL · IA Support</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
       </div>
 
-      <div class="card review-card" data-curriculum="ap">
-        <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#c0392b,#96281b)">EP</div>
-          <div>
-            <div class="review-name">Emily Peterson</div>
-            <div class="review-location">New York, USA 🇺🇸 · Parent</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"My daughter scored a 5 on AP Calculus BC after only 6 weeks of tutoring with BSR. The structured approach, practice papers, and detailed feedback on her work made a dramatic difference. Highly recommend for any AP student."</p>
-        <span class="review-subject">AP Calculus BC</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
-      </div>
-
-      <div class="card review-card" data-curriculum="cbse">
-        <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">SS</div>
-          <div>
-            <div class="review-name">Sunita Sharma</div>
-            <div class="review-location">Delhi, India 🇮🇳 · Parent</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"We enrolled our son for CBSE Class 12 Physics and Chemistry. The results were outstanding — 95 in Physics and 93 in Chemistry. The tutors are extremely knowledgeable and the sessions fit perfectly into his schedule."</p>
-        <span class="review-subject">CBSE Physics & Chemistry · Class 12</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
-      </div>
-
+      <!-- Rajani — WhatsApp (UAE, for Aura) -->
       <div class="card review-card" data-curriculum="igcse">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#0984e3,#74b9ff)">JL</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#c0392b,#96281b)">R</div>
           <div>
-            <div class="review-name">James Li</div>
-            <div class="review-location">Hong Kong 🇭🇰 · Parent</div>
+            <div class="review-name">Rajani</div>
+            <div class="review-location">UAE 🇦🇪 · Parent of Aura</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Excellent service from start to finish. The initial assessment was thorough, the tutor matched was perfect, and the communication with parents was outstanding. My son's IGCSE Physics improved from a 6 to a 9 (A*)."</p>
-        <span class="review-subject">IGCSE Physics</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+        <p class="review-text">"So just wanted to share — Aura has great feedback on you. She loves your teaching style which is interactive and engaging. She looks forward to her classes. Thank you for being her mentor. Aura loves your teaching and she is very happy!"</p>
+        <span class="review-subject">Mathematics · Interactive Learning</span>
+        <div class="platform-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Feedback
+        </div>
       </div>
 
-      <div class="card review-card" data-curriculum="alevel">
+      <!-- Ansar Mohammed — Google Review (Math) -->
+      <div class="card review-card" data-curriculum="all">
         <div class="review-header">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#d63031,#e17055)">OM</div>
+          <div class="review-avatar" style="background:linear-gradient(135deg,#27ae60,#16a085)">AM</div>
           <div>
-            <div class="review-name">Omar Mansoor</div>
-            <div class="review-location">Doha, Qatar 🇶🇦 · Student</div>
+            <div class="review-name">Ansar Mohammed</div>
+            <div class="review-location">Parent · 9 reviews</div>
           </div>
         </div>
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"I was preparing for A-Level Economics and needed help with essay technique and data analysis. My BSR tutor gave me a framework that transformed my writing. Got an A in my A-Levels. Beyond grateful."</p>
-        <span class="review-subject">A-Level Economics</span>
-        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+        <p class="review-text">"We are very happy with the service and dedication given by Devesh — the best Maths tutor in the whole world. Thank you for the incredible teaching and commitment to our child's progress. FIVE STAR!"</p>
+        <span class="review-subject">Mathematics</span>
+        <div class="platform-badge google">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Google Review
+        </div>
       </div>
 
     </div>
@@ -342,33 +356,45 @@
       <div class="gold-bar"></div>
       <p class="section-sub" style="margin-top:16px">We're continuously adding genuine screenshot reviews shared by our students and parents via WhatsApp and social media.</p>
     </div>
-    <div class="photo-gallery-grid">
-      <div class="photo-slot">
-        <div class="upload-icon">📸</div>
-        <p>Parent Review<br><small>WhatsApp Screenshot</small></p>
+    <div class="photo-gallery-grid" id="photoGallery">
+      <div class="photo-slot real-review" onclick="openLightbox(0)">
+        <img src="reviews-screenshots/review-gurcharanjit-google.jpeg" alt="Gurcharanjit Panesar Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
       </div>
-      <div class="photo-slot">
-        <div class="upload-icon">📸</div>
-        <p>Student Result<br><small>Score Screenshot</small></p>
+      <div class="photo-slot real-review" onclick="openLightbox(1)">
+        <img src="reviews-screenshots/review-rajani-singh-google.jpeg" alt="Rajani Singh Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
       </div>
-      <div class="photo-slot">
-        <div class="upload-icon">📸</div>
-        <p>Parent Review<br><small>Google Review</small></p>
+      <div class="photo-slot real-review" onclick="openLightbox(2)">
+        <img src="reviews-screenshots/review-zayan-ahmed-google.jpeg" alt="Zayan Ahmed Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
       </div>
-      <div class="photo-slot">
-        <div class="upload-icon">📸</div>
-        <p>Student Feedback<br><small>WhatsApp Screenshot</small></p>
+      <div class="photo-slot real-review" onclick="openLightbox(3)">
+        <img src="reviews-screenshots/review-siya-mahajan-google.jpeg" alt="Siya Mahajan Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
       </div>
-      <div class="photo-slot">
-        <div class="upload-icon">📸</div>
-        <p>Parent Review<br><small>Instagram Story</small></p>
+      <div class="photo-slot real-review" onclick="openLightbox(4)">
+        <img src="reviews-screenshots/review-shweta-mishra-google.jpeg" alt="Shweta Mishra Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
       </div>
-      <div class="photo-slot">
-        <div class="upload-icon">📸</div>
-        <p>Result Screenshot<br><small>Grade Card</small></p>
+      <div class="photo-slot real-review" onclick="openLightbox(5)">
+        <img src="reviews-screenshots/review-ansar-mohammed-google.jpeg" alt="Ansar Mohammed Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
+      </div>
+      <div class="photo-slot real-review" onclick="openLightbox(6)">
+        <img src="reviews-screenshots/review-madhavi-chat-full.jpeg" alt="Madhavi WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
+      </div>
+      <div class="photo-slot real-review" onclick="openLightbox(7)">
+        <img src="reviews-screenshots/review-steve-french-whatsapp.jpeg" alt="Steve French WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
+      </div>
+      <div class="photo-slot real-review" onclick="openLightbox(8)">
+        <img src="reviews-screenshots/review-birgit-whatsapp.jpeg" alt="Birgit WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
+      </div>
+      <div class="photo-slot real-review" onclick="openLightbox(9)">
+        <img src="reviews-screenshots/review-rajani-aura-whatsapp2.jpeg" alt="Rajani UAE WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
       </div>
     </div>
-    <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:.9rem">Screenshot reviews are added as received from parents and students. <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20tutoring%20programs%20and%20free%20demo%20classes." style="color:var(--royal);font-weight:600" target="_blank" rel="noopener">Share your review via WhatsApp</a>.</p>
+    <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:.9rem">Click any screenshot to enlarge. <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20share%20a%20review%20about%20my%20experience." style="color:var(--royal);font-weight:600" target="_blank" rel="noopener">Share your review via WhatsApp →</a></p>
+
+    <!-- Lightbox -->
+    <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;" onclick="closeLightbox()">
+      <img id="lightboxImg" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.6)" alt="Review screenshot">
+      <button onclick="closeLightbox()" style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;width:44px;height:44px;border-radius:50%;cursor:pointer">✕</button>
+    </div>
   </div>
 </section>
 
@@ -498,21 +524,45 @@ const nav=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{nav.style.boxShadow=window.scrollY>20?'0 4px 24px rgba(0,0,0,.1)':'none';});
 document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
 
-// Filter reviews
+// Filter reviews — cards tagged "all" always show
 document.querySelectorAll('.filter-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.dataset.filter;
     document.querySelectorAll('.review-card').forEach(card=>{
-      if(filter==='all' || card.dataset.curriculum===filter){
-        card.style.display='';
-      } else {
-        card.style.display='none';
-      }
+      const curr = card.dataset.curriculum;
+      card.style.display = (filter==='all' || curr===filter || curr==='all') ? '' : 'none';
     });
   });
 });
+
+// Lightbox for screenshot gallery
+const lightboxImages = [
+  'reviews-screenshots/review-gurcharanjit-google.jpeg',
+  'reviews-screenshots/review-rajani-singh-google.jpeg',
+  'reviews-screenshots/review-zayan-ahmed-google.jpeg',
+  'reviews-screenshots/review-siya-mahajan-google.jpeg',
+  'reviews-screenshots/review-shweta-mishra-google.jpeg',
+  'reviews-screenshots/review-ansar-mohammed-google.jpeg',
+  'reviews-screenshots/review-madhavi-chat-full.jpeg',
+  'reviews-screenshots/review-steve-french-whatsapp.jpeg',
+  'reviews-screenshots/review-birgit-whatsapp.jpeg',
+  'reviews-screenshots/review-rajani-aura-whatsapp2.jpeg'
+];
+function openLightbox(idx){
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = lightboxImages[idx];
+  lb.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLightbox(); });
+// Stop propagation on image click so clicking image doesn't close lightbox
+document.getElementById('lightboxImg')?.addEventListener('click',e=>e.stopPropagation());
 </script>
 </body>
 </html>
