@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student & Parent Reviews | BSR Global Education Academy</title>
+<meta name="description" content="Read real reviews from parents and students worldwide about BSR Global Education Academy. See why 500+ families trust BSR for IB, IGCSE, CBSE, AP tutoring.">
+<meta property="og:title" content="Reviews | BSR Global Education Academy">
+<meta property="og:description" content="Trusted by 500+ students worldwide. Read genuine reviews from parents and students across 14+ countries.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.reviews-hero {
+  background: linear-gradient(145deg,#0B2E5A 0%,#1A4FA0 100%);
+  padding:140px 0 80px; text-align:center; color:#fff;
+}
+.reviews-hero h1 { color:#fff; margin-bottom:16px; }
+.reviews-hero p  { color:rgba(255,255,255,.75); font-size:1.15rem; max-width:640px; margin:0 auto; }
+
+.rating-summary {
+  display:flex; align-items:center; justify-content:center;
+  gap:40px; flex-wrap:wrap; margin-top:40px;
+}
+.rating-big { text-align:center; }
+.rating-big .number { font-size:4rem; font-weight:800; color:var(--gold-light); line-height:1; }
+.rating-big .stars-row { color:var(--gold); font-size:1.4rem; letter-spacing:2px; margin:6px 0; }
+.rating-big .label { color:rgba(255,255,255,.6); font-size:.88rem; }
+.rating-bars { flex:1; max-width:320px; }
+.rating-bar-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.rating-bar-row .star-label { color:rgba(255,255,255,.7); font-size:.82rem; min-width:40px; text-align:right; }
+.bar-track { flex:1; height:8px; background:rgba(255,255,255,.15); border-radius:4px; overflow:hidden; }
+.bar-fill  { height:100%; background:var(--gold); border-radius:4px; transition:width 1s ease; }
+.rating-bar-row .pct { color:rgba(255,255,255,.5); font-size:.78rem; min-width:30px; }
+
+.reviews-filter { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:48px; }
+.filter-btn { padding:9px 20px; border-radius:50px; border:2px solid var(--border); background:transparent; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--muted); transition:var(--transition); font-family:inherit; }
+.filter-btn:hover, .filter-btn.active { background:var(--navy); border-color:var(--navy); color:#fff; }
+
+/* Extended review card styles */
+.review-card { break-inside:avoid; margin-bottom:24px; padding:28px; }
+.review-card.featured { border-color:var(--gold); background:linear-gradient(135deg,rgba(245,166,35,.04),rgba(255,255,255,1)); }
+.review-card.featured::before { content:'⭐ Featured Review'; font-size:.72rem; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.08em; display:block; margin-bottom:14px; }
+.quote-mark { font-size:3rem; line-height:.5; color:var(--gold); font-family:'Lora',serif; opacity:.4; margin-bottom:8px; display:block; }
+
+/* Platform badge */
+.platform-badge { display:inline-flex; align-items:center; gap:5px; background:rgba(37,211,102,.1); color:#0a8745; font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:50px; margin-top:10px; }
+.platform-badge.google { background:rgba(66,133,244,.1); color:#1a73e8; }
+
+/* Mobile carousel for reviews */
+@media (max-width:600px) {
+  .reviews-masonry { columns:1; }
+}
+
+.photo-gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  gap:16px;
+  margin-top:48px;
+}
+.photo-slot {
+  aspect-ratio:4/5;
+  border-radius:16px;
+  border:2px dashed var(--border);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:var(--cream);
+  color:var(--muted);
+  font-size:.85rem;
+  text-align:center;
+  padding:20px;
+  cursor:pointer;
+  transition:var(--transition);
+}
+.photo-slot:hover { border-color:var(--royal); background:rgba(26,79,160,.04); }
+.photo-slot .upload-icon { font-size:2rem; margin-bottom:8px; }
+
+.contact-share { background:linear-gradient(135deg,var(--navy),var(--royal)); border-radius:24px; padding:56px; text-align:center; }
+.contact-share h2 { color:#fff; margin-bottom:12px; }
+.contact-share p  { color:rgba(255,255,255,.7); max-width:500px; margin:0 auto 32px; }
+.wa-share-btn { background:#25D366; color:#fff; font-size:1rem; padding:16px 36px; }
+.wa-share-btn:hover { background:#20c05a; transform:translateY(-2px); }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="BSR Global Education Academy Logo">
+      <div class="nav-logo-text"><strong>BSR Global</strong><span>Education Academy</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="teachers.html">Our Teachers</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="demo.html" class="btn btn-primary">Book Free Demo</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="https://www.youtube.com/@BSRGlobalEducation" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/bsrglobalacademy?utm_source=qr&igsh=ejBpeWNtMnh1djho" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61587389646397" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="reviews-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Reviews</div>
+  <h1>Trusted by Parents &amp; Students Worldwide</h1>
+  <p>See what our students and parents say about their learning experience with BSR Global Academy.</p>
+  <div class="rating-summary">
+    <div class="rating-big">
+      <div class="number">4.9</div>
+      <div class="stars-row">★★★★★</div>
+      <div class="label">Based on 200+ reviews</div>
+    </div>
+    <div class="rating-bars">
+      <div class="rating-bar-row"><span class="star-label">5 ★</span><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div><span class="pct">88%</span></div>
+      <div class="rating-bar-row"><span class="star-label">4 ★</span><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div><span class="pct">9%</span></div>
+      <div class="rating-bar-row"><span class="star-label">3 ★</span><div class="bar-track"><div class="bar-fill" style="width:3%"></div></div><span class="pct">3%</span></div>
+      <div class="rating-bar-row"><span class="star-label">2 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="pct">0%</span></div>
+      <div class="rating-bar-row"><span class="star-label">1 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="pct">0%</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Buttons -->
+<section style="padding:60px 0 0">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">All Reviews</span>
+      <h2 class="section-title">What Families Are Saying</h2>
+      <div class="gold-bar"></div>
+    </div>
+    <div class="reviews-filter" style="margin-top:32px">
+      <button class="filter-btn active" data-filter="all">All Reviews</button>
+      <button class="filter-btn" data-filter="ib">IB</button>
+      <button class="filter-btn" data-filter="igcse">IGCSE / GCSE</button>
+      <button class="filter-btn" data-filter="cbse">CBSE / ICSE</button>
+      <button class="filter-btn" data-filter="ap">AP / SAT</button>
+      <button class="filter-btn" data-filter="alevel">A-Level</button>
+    </div>
+  </div>
+</section>
+
+<!-- Review Gallery -->
+<section style="padding-top:32px">
+  <div class="container">
+    <div class="reviews-masonry" id="reviewsGrid">
+
+      <div class="card review-card featured" data-curriculum="ib">
+        <div class="review-header">
+          <div class="review-avatar">MN</div>
+          <div>
+            <div class="review-name">Meera Nair</div>
+            <div class="review-location">Singapore 🇸🇬 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My son went from failing his IB Mathematics HL to scoring a 6 in just three months. The tutor identified his exact weak spots and built up his confidence step by step. BSR is genuinely the best investment we've made in his education. I recommend them to every parent I know."</p>
+        <span class="review-subject">IB Mathematics HL</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="igcse">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#c0392b,#e74c3c)">AR</div>
+          <div>
+            <div class="review-name">Ahmed Al-Rashidi</div>
+            <div class="review-location">Dubai, UAE 🇦🇪 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The flexibility is incredible. Our daughter studies in the UK and we're in Dubai — BSR schedules sessions perfectly across both time zones. Her IGCSE Chemistry went from a C to an A* in one term. Exceptional tutors."</p>
+        <span class="review-subject">IGCSE Chemistry</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="ap">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#27ae60,#2ecc71)">TJ</div>
+          <div>
+            <div class="review-name">Tyler Johnson</div>
+            <div class="review-location">Texas, USA 🇺🇸 · Student</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"BSR helped me ace my SAT with a 1520 score. The sessions were super focused — no wasted time. My tutor knew exactly which question types I struggled with and drilled them until I felt completely ready."</p>
+        <span class="review-subject">SAT Prep · Grade 11</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="alevel">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#8e44ad,#9b59b6)">PK</div>
+          <div>
+            <div class="review-name">Priya Krishnamurthy</div>
+            <div class="review-location">Melbourne, Australia 🇦🇺 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My daughter's English Literature results have transformed completely. The tutor makes literary analysis feel natural and even enjoyable. We couldn't be happier — the regular parent updates are a lovely touch too."</p>
+        <span class="review-subject">A-Level English Literature</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="cbse">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#e67e22,#f39c12)">RV</div>
+          <div>
+            <div class="review-name">Rahul Verma</div>
+            <div class="review-location">Bangalore, India 🇮🇳 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My daughter struggled with CBSE Class 10 Maths for over a year. After just 8 sessions with BSR, she scored 97/100 in her board exams. The tutor's patience and clear explanations made all the difference."</p>
+        <span class="review-subject">CBSE Mathematics · Class 10</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card featured" data-curriculum="ib">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#2c3e50,#3498db)">SW</div>
+          <div>
+            <div class="review-name">Sarah Williams</div>
+            <div class="review-location">London, UK 🇬🇧 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We tried three other tutoring services before BSR. Nothing comes close. The tutor took the time to understand my son's specific IB exam board requirements and tailored every session perfectly. He went from a 4 to a 7 in IB Biology."</p>
+        <span class="review-subject">IB Biology HL</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="igcse">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#16a085,#1abc9c)">FA</div>
+          <div>
+            <div class="review-name">Fatima Al-Hassan</div>
+            <div class="review-location">Riyadh, Saudi Arabia 🇸🇦 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My son's confidence in Mathematics has grown enormously. His IGCSE mock results jumped from grade C to A. The tutor explains concepts so clearly — my son actually looks forward to his sessions now!"</p>
+        <span class="review-subject">IGCSE Mathematics</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="ib">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#1a5fa8,#2e7dd1)">AK</div>
+          <div>
+            <div class="review-name">Aryan Kumar</div>
+            <div class="review-location">Singapore 🇸🇬 · Student (IB DP)</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was really struggling with IB Chemistry HL and my IA. My BSR tutor not only helped me understand the core concepts but guided me through my internal assessment step by step. Got a 7! Couldn't have done it without BSR."</p>
+        <span class="review-subject">IB Chemistry HL · IA Support</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="ap">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#c0392b,#96281b)">EP</div>
+          <div>
+            <div class="review-name">Emily Peterson</div>
+            <div class="review-location">New York, USA 🇺🇸 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My daughter scored a 5 on AP Calculus BC after only 6 weeks of tutoring with BSR. The structured approach, practice papers, and detailed feedback on her work made a dramatic difference. Highly recommend for any AP student."</p>
+        <span class="review-subject">AP Calculus BC</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="cbse">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">SS</div>
+          <div>
+            <div class="review-name">Sunita Sharma</div>
+            <div class="review-location">Delhi, India 🇮🇳 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We enrolled our son for CBSE Class 12 Physics and Chemistry. The results were outstanding — 95 in Physics and 93 in Chemistry. The tutors are extremely knowledgeable and the sessions fit perfectly into his schedule."</p>
+        <span class="review-subject">CBSE Physics & Chemistry · Class 12</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="igcse">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#0984e3,#74b9ff)">JL</div>
+          <div>
+            <div class="review-name">James Li</div>
+            <div class="review-location">Hong Kong 🇭🇰 · Parent</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Excellent service from start to finish. The initial assessment was thorough, the tutor matched was perfect, and the communication with parents was outstanding. My son's IGCSE Physics improved from a 6 to a 9 (A*)."</p>
+        <span class="review-subject">IGCSE Physics</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+      <div class="card review-card" data-curriculum="alevel">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#d63031,#e17055)">OM</div>
+          <div>
+            <div class="review-name">Omar Mansoor</div>
+            <div class="review-location">Doha, Qatar 🇶🇦 · Student</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was preparing for A-Level Economics and needed help with essay technique and data analysis. My BSR tutor gave me a framework that transformed my writing. Got an A in my A-Levels. Beyond grateful."</p>
+        <span class="review-subject">A-Level Economics</span>
+        <div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Student</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Photo Review Placeholder Section -->
+<section style="background:var(--cream)">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">Screenshot Reviews</span>
+      <h2 class="section-title">Real Reviews, Real Results</h2>
+      <div class="gold-bar"></div>
+      <p class="section-sub" style="margin-top:16px">We're continuously adding genuine screenshot reviews shared by our students and parents via WhatsApp and social media.</p>
+    </div>
+    <div class="photo-gallery-grid">
+      <div class="photo-slot">
+        <div class="upload-icon">📸</div>
+        <p>Parent Review<br><small>WhatsApp Screenshot</small></p>
+      </div>
+      <div class="photo-slot">
+        <div class="upload-icon">📸</div>
+        <p>Student Result<br><small>Score Screenshot</small></p>
+      </div>
+      <div class="photo-slot">
+        <div class="upload-icon">📸</div>
+        <p>Parent Review<br><small>Google Review</small></p>
+      </div>
+      <div class="photo-slot">
+        <div class="upload-icon">📸</div>
+        <p>Student Feedback<br><small>WhatsApp Screenshot</small></p>
+      </div>
+      <div class="photo-slot">
+        <div class="upload-icon">📸</div>
+        <p>Parent Review<br><small>Instagram Story</small></p>
+      </div>
+      <div class="photo-slot">
+        <div class="upload-icon">📸</div>
+        <p>Result Screenshot<br><small>Grade Card</small></p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:.9rem">Screenshot reviews are added as received from parents and students. <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20tutoring%20programs%20and%20free%20demo%20classes." style="color:var(--royal);font-weight:600" target="_blank" rel="noopener">Share your review via WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- Follow Us -->
+<div class="follow-section">
+  <div class="container">
+    <div class="follow-inner">
+      <div class="follow-cta">
+        <h3>Follow Our Journey</h3>
+        <p>Stay connected for student success stories, learning tips, and updates on social media.</p>
+      </div>
+      <div>
+        <div class="social-icons-row">
+          <div>
+            <a href="https://www.youtube.com/@BSRGlobalEducation" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon youtube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <div class="social-label">YouTube</div>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/bsrglobalacademy?utm_source=qr&igsh=ejBpeWNtMnh1djho" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <div class="social-label">Instagram</div>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/profile.php?id=61587389646397" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <div class="social-label">Facebook</div>
+          </div>
+          <div>
+            <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20tutoring%20programs%20and%20free%20demo%20classes." target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon whatsapp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <div class="social-label">WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Share Your Review CTA -->
+<section>
+  <div class="container">
+    <div class="contact-share">
+      <h2>Had a Great Experience with BSR?</h2>
+      <p>We'd love to hear from you. Share your review and help other parents make the right choice for their child's education.</p>
+      <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20share%20a%20review%20about%20my%20experience%20with%20BSR%20Global%20Academy." class="btn wa-share-btn" target="_blank" rel="noopener">💬 Share Your Review via WhatsApp</a>
+      <p style="margin-top:20px;color:rgba(255,255,255,.5);font-size:.85rem">Or book a FREE demo class — experience BSR for yourself.</p>
+      <a href="demo.html" class="btn btn-primary" style="margin-top:12px">🎓 Book FREE Demo Class</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="BSR Global Education Academy">
+        <p>Empowering students worldwide through personalised one-to-one online tutoring. Building strong concepts, creating global success stories.</p>
+        <p class="follow-us-label">Follow Us</p>
+        <div class="footer-social-row">
+          <a href="https://www.youtube.com/@BSRGlobalEducation" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-icon youtube">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/bsrglobalacademy?utm_source=qr&igsh=ejBpeWNtMnh1djho" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61587389646397" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20tutoring%20programs%20and%20free%20demo%20classes." target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-icon whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="subjects.html">Subjects</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="teachers.html">Our Teachers</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="demo.html">Book Free Demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Subjects</h4>
+        <ul>
+          <li><a href="subjects.html">Mathematics</a></li>
+          <li><a href="subjects.html">Sciences</a></li>
+          <li><a href="subjects.html">English</a></li>
+          <li><a href="subjects.html">Computer Science</a></li>
+          <li><a href="subjects.html">Languages</a></li>
+          <li><a href="subjects.html">Communication</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20tutoring%20programs%20and%20free%20demo%20classes.">WhatsApp: +91 8318830632</a></li>
+          <li><a href="mailto:bsrglobalacademy@gmail.com">bsrglobalacademy@gmail.com</a></li>
+          <li><a href="https://www.youtube.com/@BSRGlobalEducation" target="_blank" rel="noopener">YouTube Channel</a></li>
+          <li><a href="https://www.instagram.com/bsrglobalacademy?utm_source=qr&igsh=ejBpeWNtMnh1djho" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61587389646397" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+        <a href="demo.html" class="btn btn-primary" style="margin-top:20px;font-size:.85rem;padding:12px 24px">Book Free Demo</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BSR Global Education Academy. All rights reserved.</p>
+      <p>One-to-One Online Classes Worldwide 🌍</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20tutoring%20programs%20and%20free%20demo%20classes." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.style.boxShadow=window.scrollY>20?'0 4px 24px rgba(0,0,0,.1)':'none';});
+document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+
+// Filter reviews
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.review-card').forEach(card=>{
+      if(filter==='all' || card.dataset.curriculum===filter){
+        card.style.display='';
+      } else {
+        card.style.display='none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
