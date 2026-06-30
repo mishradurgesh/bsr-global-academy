@@ -347,57 +347,6 @@
   </div>
 </section>
 
-<!-- Photo Review Placeholder Section -->
-<section style="background:var(--cream)">
-  <div class="container">
-    <div class="text-center">
-      <span class="section-label">Screenshot Reviews</span>
-      <h2 class="section-title">Real Reviews, Real Results</h2>
-      <div class="gold-bar"></div>
-      <p class="section-sub" style="margin-top:16px">We're continuously adding genuine screenshot reviews shared by our students and parents via WhatsApp and social media.</p>
-    </div>
-    <div class="photo-gallery-grid" id="photoGallery">
-      <div class="photo-slot real-review" onclick="openLightbox(0)">
-        <img src="reviews-screenshots/review-gurcharanjit-google.jpeg" alt="Gurcharanjit Panesar Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(1)">
-        <img src="reviews-screenshots/review-rajani-singh-google.jpeg" alt="Rajani Singh Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(2)">
-        <img src="reviews-screenshots/review-zayan-ahmed-google.jpeg" alt="Zayan Ahmed Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(3)">
-        <img src="reviews-screenshots/review-siya-mahajan-google.jpeg" alt="Siya Mahajan Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(4)">
-        <img src="reviews-screenshots/review-shweta-mishra-google.jpeg" alt="Shweta Mishra Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(5)">
-        <img src="reviews-screenshots/review-ansar-mohammed-google.jpeg" alt="Ansar Mohammed Google Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(6)">
-        <img src="reviews-screenshots/review-madhavi-chat-full.jpeg" alt="Madhavi WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(7)">
-        <img src="reviews-screenshots/review-steve-french-whatsapp.jpeg" alt="Steve French WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(8)">
-        <img src="reviews-screenshots/review-birgit-whatsapp.jpeg" alt="Birgit WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="photo-slot real-review" onclick="openLightbox(9)">
-        <img src="reviews-screenshots/review-rajani-aura-whatsapp2.jpeg" alt="Rajani UAE WhatsApp Review" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:24px;color:var(--muted);font-size:.9rem">Click any screenshot to enlarge. <a href="https://wa.me/918318830632?text=Hello%20BSR%20Global%20Academy%2C%20I%20would%20like%20to%20share%20a%20review%20about%20my%20experience." style="color:var(--royal);font-weight:600" target="_blank" rel="noopener">Share your review via WhatsApp →</a></p>
-
-    <!-- Lightbox -->
-    <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;" onclick="closeLightbox()">
-      <img id="lightboxImg" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,.6)" alt="Review screenshot">
-      <button onclick="closeLightbox()" style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;width:44px;height:44px;border-radius:50%;cursor:pointer">✕</button>
-    </div>
-  </div>
-</section>
-
 <!-- Follow Us -->
 <div class="follow-section">
   <div class="container">
@@ -536,33 +485,6 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{
     });
   });
 });
-
-// Lightbox for screenshot gallery
-const lightboxImages = [
-  'reviews-screenshots/review-gurcharanjit-google.jpeg',
-  'reviews-screenshots/review-rajani-singh-google.jpeg',
-  'reviews-screenshots/review-zayan-ahmed-google.jpeg',
-  'reviews-screenshots/review-siya-mahajan-google.jpeg',
-  'reviews-screenshots/review-shweta-mishra-google.jpeg',
-  'reviews-screenshots/review-ansar-mohammed-google.jpeg',
-  'reviews-screenshots/review-madhavi-chat-full.jpeg',
-  'reviews-screenshots/review-steve-french-whatsapp.jpeg',
-  'reviews-screenshots/review-birgit-whatsapp.jpeg',
-  'reviews-screenshots/review-rajani-aura-whatsapp2.jpeg'
-];
-function openLightbox(idx){
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lightboxImg').src = lightboxImages[idx];
-  lb.style.display='flex';
-  document.body.style.overflow='hidden';
-}
-function closeLightbox(){
-  document.getElementById('lightbox').style.display='none';
-  document.body.style.overflow='';
-}
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLightbox(); });
-// Stop propagation on image click so clicking image doesn't close lightbox
-document.getElementById('lightboxImg')?.addEventListener('click',e=>e.stopPropagation());
 </script>
 </body>
 </html>
