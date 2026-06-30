@@ -281,6 +281,7 @@ nav {
 .social-icon.instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 .social-icon.facebook:hover  { background: #1877F2; }
 .social-icon.whatsapp:hover  { background: #25D366; }
+.social-icon.linkedin:hover  { background: #0A66C2; }
 .social-icon:hover svg { fill: #fff; }
 .social-label { font-size: .72rem; font-weight: 700; color: var(--muted); margin-top: 6px; text-align: center; text-transform: uppercase; letter-spacing: .06em; }
 
@@ -316,6 +317,7 @@ footer {
 .footer-social-icon.instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 .footer-social-icon.facebook:hover  { background: #1877F2; }
 .footer-social-icon.whatsapp:hover  { background: #25D366; }
+.footer-social-icon.linkedin:hover  { background: #0A66C2; }
 .footer-social-icon:hover svg { fill: #fff; }
 .follow-us-label { color: rgba(255,255,255,.4); font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
 
