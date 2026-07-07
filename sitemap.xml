@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/</loc>
+    <loc>https://bsrglobaleducation.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/about.html</loc>
+    <loc>https://bsrglobaleducation.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/subjects.html</loc>
+    <loc>https://bsrglobaleducation.com/subjects.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/curriculum.html</loc>
+    <loc>https://bsrglobaleducation.com/curriculum.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/teachers.html</loc>
+    <loc>https://bsrglobaleducation.com/teachers.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/reviews.html</loc>
+    <loc>https://bsrglobaleducation.com/reviews.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://mishradurgesh.github.io/bsr-global-academy/demo.html</loc>
+    <loc>https://bsrglobaleducation.com/demo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
