@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mishradurgesh.github.io/bsr-global-academy/sitemap.xml
+Sitemap: https://bsrglobaleducation.com/sitemap.xml
